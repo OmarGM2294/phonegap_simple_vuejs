@@ -1,6 +1,6 @@
 {
   "name": "phonegap-simple-vuejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple template to use vue with phonegap",
   "main": "index.js",
   "scripts": {
