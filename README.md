@@ -38,6 +38,12 @@ There are 4 components pre-installed in the template:
 2. Vue Resource. See the documentation [here](https://github.com/pagekit/vue-resource).
 3. Vuex. See the documentation [here](https://vuex.vuejs.org/en/).
 4. Vue i18n. See the documentation [here](http://kazupon.github.io/vue-i18n/).
+
+## Project structure
+
+The projects manage all content in two important folders, assets and components, and inside each one another structure recommended.
+
+An important thing to know, an organized project reflects an organized mind, so do the best to keep this structure if you want.
  
 ## Troubleshooting
 
