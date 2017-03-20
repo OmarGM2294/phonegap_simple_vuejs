@@ -3,7 +3,8 @@
         <div id="content">
             <img :src="imageSrc" />
             <p>
-              {{ $t("welcome") }}
+              {{ $t("welcome") }}<br>
+              {{ $t("language") }} {{ getLanguage() }}
             </p>
         </div>
     </div>
@@ -26,20 +27,18 @@
         },
         mounted(){
             this.clientHeight = document.documentElement.clientHeight + 'px';
+            this.updateLanguage(navigator.language || navigator.userLanguage);
         }
     }
 </script>
 
 <style scoped>
     div#body{
-        height: 100%;
-        margin: -8px;
-        height: 100%;
-        background: #37495f; /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#3ab982, #37495f); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#3ab982, #37495f); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#3ab982, #37495f); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#3ab982, #37495f); /* Standard syntax (must be last) */
+        background: #37495f;
+        background: -webkit-linear-gradient(#3ab982, #37495f);
+        background: -o-linear-gradient(#3ab982, #37495f);
+        background: -moz-linear-gradient(#3ab982, #37495f);
+        background: linear-gradient(#3ab982, #37495f);
     }
 
     #content{
