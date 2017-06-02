@@ -1,73 +1,75 @@
 {
-    "name": "phonegap-simple-vuejs",
-    "version": "1.0.0",
-    "description": "A simple template to use vue with phonegap",
-    "main": "index.js",
-    "scripts": {
-        "watchify": "watchify -vd -p browserify-hmr -e www/src/main.js -o www/dist/build.js",
-        "serve": "phonegap serve --port 3000",
-        "dev": "npm-run-all --parallel watchify serve",
-        "build": "cross-env NODE_ENV=production browserify -e www/src/main.js | uglifyjs -c warnings=false -m > www/dist/build.js & cordova build --release --device --target=",
-        "test": "karma start karma.conf.js",
-        "prepare": "cordova platform add",
-        "ios": "cordova run ios",
-        "android": "cordova run android",
-        "compile": "browserify -e www/src/main.js -o www/dist/build.js & cordova compile --debug --target=",
-        "clean:platforms": "rimraf platforms/*",
-        "clean:dist": "rimraf www/dist/*",
-        "clean": "npm-run-all clean:platforms clean:dist"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/OmarGM2294/phonegap_simple_vuejs.git"
-    },
-    "keywords": [
-        "cordova:template",
-        "phonegap:template",
-        "Phonegap",
-        "Vue",
-        "cordova"
-    ],
-    "browserify": {
-        "transform": [
-            "babelify",
-            "vueify"
-        ]
-    },
-    "browser": {
-        "vue": "vue/dist/vue.common.js"
-    },
-    "author": "Omar Gonzalez",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/OmarGM2294/phonegap_simple_vuejs/issues"
-    },
-    "homepage": "https://github.com/OmarGM2294/phonegap_simple_vuejs#readme",
-    "dependencies": {
-        "phonegap": "^6.4.4",
-        "cordova": "^6.5.0",
-        "browserify": "^14.1.0",
-        "vue": "^2.1.10",
-        "vue-resource": "^1.2.0",
-        "vue-router": "^2.2.1",
-        "vuex": "^2.1.2",
-        "vueify": "~8.5.4",
-        "babel-core": "6.9.1",
-        "babel-preset-es2015": "6.9.0",
-        "babel-runtime": "6.9.2",
-        "babel-plugin-transform-runtime": "6.9.0",
-        "vue-hot-reload-api": "2.0.1"
-    },
-    "devDependencies": {
-        "babel-preset-stage-2": "^6.0.0",
-        "babelify": "^7.2.0",
-        "browserify-hmr": "^0.3.1",
-        "cross-env": "^2.0.0",
-        "envify": "^3.4.1",
-        "http-server": "^0.9.0",
-        "npm-run-all": "^2.3.0",
-        "proxyquireify": "^3.0.1",
-        "uglify-js": "^2.5.0",
-        "watchify": "^3.4.0"
-    }
+  "name": "phonegap-simple-vuejs",
+  "version": "1.0.0",
+  "description": "A simple template to use vue with phonegap",
+  "main": "index.js",
+  "scripts": {
+    "watchify": "watchify -vd -p browserify-hmr -e www/src/main.js -o www/dist/build.js",
+    "serve": "phonegap serve --port 3000",
+    "dev": "npm-run-all --parallel watchify serve",
+    "build": "cross-env NODE_ENV=production browserify -e www/src/main.js | uglifyjs -c warnings=false -m > www/dist/build.js & cordova build --release --device --target=",
+    "test": "karma start karma.conf.js",
+    "prepare": "cordova platform add",
+    "ios": "cordova run ios",
+    "android": "cordova run android",
+    "compile": "browserify -e www/src/main.js -o www/dist/build.js & cordova compile --debug --target=",
+    "clean:platforms": "rimraf platforms/*",
+    "clean:dist": "rimraf www/dist/*",
+    "clean": "npm-run-all clean:platforms clean:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarGM2294/phonegap_simple_vuejs.git"
+  },
+  "keywords": [
+    "cordova:template",
+    "phonegap:template",
+    "Phonegap",
+    "Vue",
+    "cordova"
+  ],
+  "browserify": {
+    "transform": [
+      "babelify",
+      "vueify"
+    ]
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
+  "author": "Omar Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmarGM2294/phonegap_simple_vuejs/issues"
+  },
+  "homepage": "https://github.com/OmarGM2294/phonegap_simple_vuejs#readme",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-plugin-transform-runtime": "6.9.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-runtime": "6.23.0",
+    "browserify": "^14.1.0",
+    "cordova": "^6.5.0",
+    "phonegap": "^6.4.4",
+    "vue": "^2.1.10",
+    "vue-hot-reload-api": "2.0.1",
+    "vue-i18n": "^6.0.0-alpha.2",
+    "vue-resource": "^1.2.0",
+    "vue-router": "^2.2.1",
+    "vueify": "~8.5.4",
+    "vuex": "^2.1.2"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify-hmr": "^0.3.1",
+    "cross-env": "^2.0.0",
+    "envify": "^3.4.1",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^2.3.0",
+    "proxyquireify": "^3.0.1",
+    "uglify-js": "^2.5.0",
+    "watchify": "^3.4.0"
+  }
 }
+
