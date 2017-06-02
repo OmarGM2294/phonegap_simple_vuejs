@@ -50,6 +50,10 @@
         transform: translate(-50%,-50%);
     }
 
+    img{
+        width: 100%;
+    }
+
     p{
         color: #FFF;
         font-family: sans-serif;

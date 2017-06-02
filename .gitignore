@@ -2,3 +2,4 @@
 node_modules
 npm-debug.log
 template_src/platforms
+template_src/www/dist/build.js
