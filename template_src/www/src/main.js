@@ -1,38 +1,12 @@
 import Vue from'vue'
-import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
-import VueI18n from 'vue-i18n'
 import App from './App.vue'
-import { routes } from './routes.js'
-import { locales } from './locales.js'
-import { store } from './store/index'
-import { mapActions } from 'vuex';
-import { mapGetters } from 'vuex';
-
-Vue.use(VueI18n);
-Vue.use(VueRouter);
-Vue.use(VueResource);
-
-Vue.mixin({
-    methods: {
-        ...mapActions([
-            "updateLanguage"
-        ]),
-        ...mapGetters([
-            "getLanguage"
-        ])
-    }
-});
-
-var i18n = new VueI18n({
-    locale: navigator.language.slice(0,2),
-    messages: locales,
-    fallbackLocale: 'en'
-});
-
-const router = new VueRouter({
-    routes: routes
-});
+import i18n from './vue/i18n/index'
+import router from './vue/router/index'
+import store from './vue/store/index'
+import './vue/resource/index'
+import './vue/components'
+import './vue/filters'
+import './vue/mixins'
 
 new Vue({
     el: "#app",
